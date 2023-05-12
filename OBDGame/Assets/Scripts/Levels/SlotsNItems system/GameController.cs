@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
     public void Start()
     {
         CreateSlots();
-        CreateItems();
+        //CreateItems();
         //CreatePath();
     }
 
@@ -59,14 +59,7 @@ public class GameController : MonoBehaviour
     
     public void CreateItems()
     {
-        for (int i = 0; i < 1; i++)
-        {
-            GameObject tmpCell = Instantiate(itemPrefab);
-            tmpCell.transform.SetParent(cellGroup, false);
-            tmpCell.GetComponent<CellSlot>().id = i + 1;
-            tmpCell.GetComponent<CellSlot>().SetState(0);
-            tmpCell.GetComponent<CellSlot>().transform.localPosition = new Vector3(slotAndItemsPosisitions[i,0],slotAndItemsPosisitions[i,1], 0 );
-        }
+
     }
     
     public void CreatePath()
