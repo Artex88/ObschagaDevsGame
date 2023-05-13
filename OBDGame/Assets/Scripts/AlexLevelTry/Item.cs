@@ -29,7 +29,7 @@ public class Item : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / mainCanvas.scaleFactor;
-        Cursor.visible = true;
+        Cursor.visible = false;
         gameObject.transform.localScale = new Vector3(2.2f, 2.2f, 2.2f);
     }
 
