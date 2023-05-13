@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class Item : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     private RectTransform rectTransform;
+    private Canvas mainCanvas;
     private Image image;
     public Cursor cursor;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+        mainCanvas = GetComponentInParent<Canvas>();
         image = GetComponent<Image>();
     }
 
@@ -26,10 +28,9 @@ public class Item : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta;
-        Cursor.visible = false;
+        rectTransform.anchoredPosition += eventData.delta / mainCanvas.scaleFactor;
+        Cursor.visible = true;
         gameObject.transform.localScale = new Vector3(2.2f, 2.2f, 2.2f);
-
     }
 
     public void OnEndDrag(PointerEventData eventData)
