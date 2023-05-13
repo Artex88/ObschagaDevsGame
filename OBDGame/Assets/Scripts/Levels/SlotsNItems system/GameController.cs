@@ -37,11 +37,12 @@ public class GameController : MonoBehaviour
         { -121.5f, 236.3f, 0f },
         { -7.8f, 314.4f, 0f }
     };
-    
+
     public void Start()
     {
         CreateSlots();
-        CreateItems();
+        //CreateItems();
+        //CreateItems();
         //CreatePath();
     }
 
@@ -53,10 +54,10 @@ public class GameController : MonoBehaviour
             tmpCell.transform.SetParent(cellGroup, false);
             tmpCell.GetComponent<CellSlot>().id = i + 1;
             tmpCell.GetComponent<CellSlot>().SetState(0);
-            tmpCell.GetComponent<CellSlot>().transform.localPosition = new Vector3(slotAndItemsPosisitions[i,0],slotAndItemsPosisitions[i,1], 0 );
+            tmpCell.GetComponent<CellSlot>().transform.localPosition = new Vector3(slotAndItemsPosisitions[i, 0], slotAndItemsPosisitions[i, 1], 0);
         }
     }
-    
+
     public void CreateItems()
     {
         for (int i = 0; i < 1; i++)
@@ -65,12 +66,13 @@ public class GameController : MonoBehaviour
             tmpCell.transform.SetParent(cellGroup, false);
             tmpCell.GetComponent<CellSlot>().id = i + 1;
             tmpCell.GetComponent<CellSlot>().SetState(0);
-            tmpCell.GetComponent<CellSlot>().transform.localPosition = new Vector3(slotAndItemsPosisitions[i,0],slotAndItemsPosisitions[i,1], 0 );
+            tmpCell.GetComponent<CellSlot>().transform.localPosition = new Vector3(slotAndItemsPosisitions[i, 0], slotAndItemsPosisitions[i, 1], 0);
         }
+
     }
-    
+
     public void CreatePath()
     {
-        
+
     }
 }
