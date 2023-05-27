@@ -7089,8 +7089,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.52, y: -16.808}
-  m_SizeDelta: {x: 243.35, y: 152.73}
+  m_AnchoredPosition: {x: -6.52, y: -14.6}
+  m_SizeDelta: {x: 243.35, y: 167.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1237617806
 MonoBehaviour:
@@ -10872,7 +10872,7 @@ RectTransform:
   m_Father: {fileID: 1058035377}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.49299562}
+  m_AnchorMin: {x: 0, y: 0.44293588}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -11328,8 +11328,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.24, y: 77.79}
-  m_SizeDelta: {x: 253.9, y: 48.82}
+  m_AnchoredPosition: {x: -1.24, y: 88.42}
+  m_SizeDelta: {x: 253.9, y: 27.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1960634068
 MonoBehaviour:
@@ -11364,8 +11364,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "2. \u043A\u043E\u043C\u043C\u0443\u0442\u0430\u0442\u043E\u0440 \n\u0438
-    \u043A\u043E\u043D\u0446\u0435\u043D\u0442\u0440\u0430\u0442\u043E\u0440"
+  m_Text: "2. \u043A\u043E\u043D\u0446\u0435\u043D\u0442\u0440\u0430\u0442\u043E\u0440(hub)"
 --- !u!222 &1960634069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12005,7 +12004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00013117796, y: -74.25501}
+  m_AnchoredPosition: {x: 0.00013117796, y: -66.71563}
   m_SizeDelta: {x: 227.04, y: 301.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2055513592
@@ -12030,7 +12029,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -12041,25 +12040,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F \u0441\u0435\u0442\u0438
-    \u0441 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0435\u043C
-    \u043A\u043E\u043C\u043C\u0443\u0442\u0430\u0442\u043E\u0440\u0430. \u0415\u0441\u043B\u0438
-    \u0432 \u0441\u0435\u0442\u0438 \u043F\u043E\u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F
+  m_Text: "\u0415\u0441\u043B\u0438 \u0432 \u0441\u0435\u0442\u0438 \u043F\u043E\u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F
     \u0431\u043E\u043B\u044C\u0448\u0435 2-\u0443\u0445 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043E\u0432
     \u2013 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043D\u043E\u0432\u043E\u0435
-    \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E. \u0415\u0441\u0442\u044C
-    \u0434\u0432\u0430 \u0432\u0430\u0440\u0438\u0430\u043D\u0442\u0430: \r\n \u2022
-    \u0421\u0435\u0442\u0435\u0432\u043E\u0439 \u043A\u043E\u043D\u0446\u0435\u043D\u0442\u0440\u0430\u0442\u043E\u0440
-    \u2013 Hub \u2013 \u043F\u0435\u0440\u0432\u044B\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C
-    \u043C\u043E\u0434\u0435\u043B\u0438 OSI (L1) \u2013 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0435\u0442
-    \u043F\u0430\u043A\u0435\u0442\u044B \u0432\u043E \u0432\u0441\u0435 \u043F\u043E\u0440\u0442\u044B,
-    \u043A\u0440\u043E\u043C\u0435 \u043F\u043E\u0440\u0442\u0430 \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A\u0430\r\n\u2022
-    \u041A\u043E\u043C\u043C\u0443\u0442\u0430\u0442\u043E\u0440 \u2013 Switch \u2013
-    \u0432\u0442\u043E\u0440\u043E\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C
-    \u043C\u043E\u0434\u0435\u043B\u0438 OSI (L2) \u2013 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0435\u0442
-    \u043F\u0430\u043A\u0435\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u0432 \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u043D\u044B\u0439
-    \u043F\u043E\u0440\u0442 \u0437\u0430 \u0441\u0447\u0435\u0442 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u044F
-    \u0442\u0430\u0431\u043B\u0438\u0446\u044B MAC-\u0430\u0434\u0440\u0435\u0441\u043E\u0432.\r\n"
+    \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E.\n\u0412 \u044D\u0442\u043E\u043C
+    \u0443\u0440\u043E\u0432\u043D\u0435 \u043C\u044B \u0440\u0430\u0441\u0441\u043C\u043E\u0442\u0440\u0438\u043C
+    \u043E\u0434\u043D\u043E \u0438\u0437 \u043D\u0438\u0445, \u0430 \u0438\u043C\u0435\u043D\u043D\u043E
+    \u043A\u043E\u043D\u0446\u0435\u043D\u0442\u0440\u0430\u0442\u043E\u0440 \u0438
+    \u0441\u043E\u0437\u0434\u0430\u0434\u0438\u043C \u043F\u0440\u043E\u0441\u0442\u0435\u0439\u0448\u0443\u044E
+    \u0441\u0435\u0442\u044C \u0441 \u0435\u0433\u043E \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0435\u043C.\n"
 --- !u!222 &2055513593
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12937,8 +12926,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1922579825}
   m_HandleRect: {fileID: 1922579824}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.5070044
+  m_Value: 1.0000048
+  m_Size: 0.5570641
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

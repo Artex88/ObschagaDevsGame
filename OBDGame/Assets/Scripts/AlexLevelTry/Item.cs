@@ -30,7 +30,7 @@ public class Item : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     {
         rectTransform.anchoredPosition += eventData.delta / mainCanvas.scaleFactor;
         Cursor.visible = false;
-        gameObject.transform.localScale = new Vector3(2.2f, 2.2f, 2.2f);
+        gameObject.transform.localScale = new Vector3(1.38f, 1.38f, 1.38f);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -38,6 +38,6 @@ public class Item : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         //image.color = new Color(255f, 255f, 255f, 1f);
         image.raycastTarget = true;
         Cursor.visible = true;
-        gameObject.transform.localScale = new Vector3(2f, 2f, 2f);
+        gameObject.transform.localScale = new Vector3(1.25f, 1.25f, 1.25f);
     }
 }
