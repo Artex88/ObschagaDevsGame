@@ -6,38 +6,37 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    private RectTransform rectTransform;
+    [HideInInspector] public Transform parentAfterDrag;
     private Canvas mainCanvas;
     private Image image;
     public Cursor cursor;
 
     private void Awake()
     {
-        rectTransform = GetComponent<RectTransform>();
         mainCanvas = GetComponentInParent<Canvas>();
         image = GetComponent<Image>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        //image.color = new Color(0f, 255f, 200f, 0.7f);
+        parentAfterDrag = transform.parent;
+        transform.SetParent(transform.root);
+        transform.SetAsLastSibling();
         image.raycastTarget = false;
-        var slotTransform = rectTransform.parent;
-        slotTransform.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta / mainCanvas.scaleFactor;
         Cursor.visible = false;
-        gameObject.transform.localScale = new Vector3(1.38f, 1.38f, 1.38f);
+        gameObject.transform.localScale = new Vector3(0.23f, 0.23f, 0.23f);
+        transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //image.color = new Color(255f, 255f, 255f, 1f);
         image.raycastTarget = true;
         Cursor.visible = true;
-        gameObject.transform.localScale = new Vector3(1.25f, 1.25f, 1.25f);
+        gameObject.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        transform.SetParent(parentAfterDrag);
     }
 }
