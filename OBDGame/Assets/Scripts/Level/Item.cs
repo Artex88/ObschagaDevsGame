@@ -9,7 +9,11 @@ public class Item : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     [HideInInspector] public Transform parentAfterDrag;
     private Canvas mainCanvas;
     private Image image;
+    //private Renderer renderer;
+    public Material redMaterial;
+    public Material yelMaterial;
     public Cursor cursor;
+
 
     private void Awake()
     {
@@ -23,6 +27,7 @@ public class Item : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
+        image.material = redMaterial;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -38,5 +43,6 @@ public class Item : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         Cursor.visible = true;
         gameObject.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         transform.SetParent(parentAfterDrag);
+        image.material = yelMaterial;
     }
 }
