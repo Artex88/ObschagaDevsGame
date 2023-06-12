@@ -9,4 +9,14 @@ public class UIControll : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene((int.Parse(PlayerPrefs.GetString("lastLevel")) +1).ToString());
+    }
+
+    public void Reload()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
