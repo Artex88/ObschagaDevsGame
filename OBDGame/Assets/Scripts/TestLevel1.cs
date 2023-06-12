@@ -16,8 +16,7 @@ public class TestLevel1 : MonoBehaviour
     public Item line2;
     public Item line3;
 
-    public Text ipHubT;
-    public Text ipPc1T;
+    public Text ipMyPcT;
     public Text ipPc2T;
     public Text ipPc3T;
 
@@ -28,7 +27,7 @@ public class TestLevel1 : MonoBehaviour
 
     public bool Test()
     {
-        foreach(var slot in slots)
+        foreach (var slot in slots)
         {
             if (slot.transform.childCount == 0)
             {
@@ -36,15 +35,18 @@ public class TestLevel1 : MonoBehaviour
             }
         }
 
-        if (slots[0].transform.GetChild(0).IsChildOf(pc1.transform) || 
-            slots[0].transform.GetChild(0).IsChildOf(pc2.transform) || 
-            slots[0].transform.GetChild(0).IsChildOf(pc3.transform)) { } else { return false; }
-        if (slots[6].transform.GetChild(0).IsChildOf(pc1.transform) || 
-            slots[6].transform.GetChild(0).IsChildOf(pc2.transform) || 
-            slots[6].transform.GetChild(0).IsChildOf(pc3.transform)) { } else { return false; }
-        if (slots[4].transform.GetChild(0).IsChildOf(pc1.transform) || 
-            slots[4].transform.GetChild(0).IsChildOf(pc2.transform) || 
-            slots[4].transform.GetChild(0).IsChildOf(pc3.transform)) { } else { return false; }
+        if (slots[0].transform.GetChild(0).IsChildOf(pc1.transform) ||
+            slots[0].transform.GetChild(0).IsChildOf(pc2.transform) ||
+            slots[0].transform.GetChild(0).IsChildOf(pc3.transform)) { }
+        else { return false; }
+        if (slots[6].transform.GetChild(0).IsChildOf(pc1.transform) ||
+            slots[6].transform.GetChild(0).IsChildOf(pc2.transform) ||
+            slots[6].transform.GetChild(0).IsChildOf(pc3.transform)) { }
+        else { return false; }
+        if (slots[4].transform.GetChild(0).IsChildOf(pc1.transform) ||
+            slots[4].transform.GetChild(0).IsChildOf(pc2.transform) ||
+            slots[4].transform.GetChild(0).IsChildOf(pc3.transform)) { }
+        else { return false; }
 
         if (!slots[2].transform.GetChild(0).IsChildOf(hub.transform)) return false;
 
@@ -52,18 +54,17 @@ public class TestLevel1 : MonoBehaviour
         if (!slots[3].transform.GetChild(0).IsChildOf(line1.transform)) return false;
         if (!slots[5].transform.GetChild(0).IsChildOf(line2.transform)) return false;
 
-        var ip = GetIP();
-        string ipHub = ipHubT.text;
-        string ipPc1 = ipHubT.text;
-        string ipPc2 = ipHubT.text;
-        string ipPc3 = ipHubT.text;
+        var ip = GetIP().Split('.');
+        string[] ipPc1 = ipMyPcT.text.Trim().Split('.');
+        string[] ipPc2 = ipPc2T.text.Trim().Split('.');
+        string[] ipPc3 = ipPc3T.text.Trim().Split('.');
 
-        ipHub.Trim();
-        ipPc1.Trim();
-        ipPc2.Trim();
-        ipPc3.Trim();
 
-        if (ip != ipPc1 || ip != ipHub || ip != ipPc2 || ip != ipPc3)
+
+        if (ip[0] != ipPc1[0] || ip[1] != ipPc1[1] || ip[2] != ipPc1[2] || ip[3] != ipPc1[3] ||
+            ip[0] != ipPc2[0] || ip[1] != ipPc2[1] || ip[2] != ipPc2[2] || ip[3] == ipPc2[3] || int.Parse(ipPc2[3]) > 255 || int.Parse(ipPc2[3]) < 0 ||
+            ip[0] != ipPc3[0] || ip[1] != ipPc3[1] || ip[2] != ipPc3[2] || ip[3] == ipPc3[3] || int.Parse(ipPc3[3]) > 255 || int.Parse(ipPc3[3]) < 0 ||
+            ipPc1[3] == ipPc2[3] || ipPc1[3] == ipPc3[3] || ipPc3[3] == ipPc2[3])
         {
             error.text = "неверно указан IP-адрес!";
             return false;
@@ -89,7 +90,7 @@ public class TestLevel1 : MonoBehaviour
     {
         if (gameObject.activeSelf)
         {
-            Invoke("StartTest",4f);
+            Invoke("StartTest", 4f);
         }
     }
 
@@ -109,3 +110,4 @@ public class TestLevel1 : MonoBehaviour
         return ipAddress.ToString();
     }
 }
+
